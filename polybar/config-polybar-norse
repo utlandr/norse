@@ -279,7 +279,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -453,9 +453,10 @@ type = custom/menu
 expand-right = true
 
 format-spacing = 1
+format-underline = ${colors.nord11}
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.nord5}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
