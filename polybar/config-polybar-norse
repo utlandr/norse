@@ -10,6 +10,7 @@
 ;
 ;
 ;   To learn more about how to configure Polybar
+;   rd
 ;   go to https://github.com/jaagr/polybar
 ;
 ;   The README contains alot of information
@@ -17,9 +18,27 @@
 ;===================================================================================================================
 
 [colors]
-; Adding the nord colour pallette through Xresources
+; Adding the nord colour pallette through Xresources. Names will reflect the original nord groups
 background = ${xrdb:background:#222}
 foreground = ${xrdb:foreground:#222}
+
+nord0 = #2E3440
+nord1 = #3B4252
+nord2 = #434C5E
+nord3 = #4C566A
+nord4 = #D8DEE9
+nord5 = #E5E9F0
+nord6 = #ECEFF4
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+nord10 = #5E81AC
+nord11 = #BF616A
+nord12 = #D08770
+nord13 = #EBCB8B
+nord14 = #A3BE8C
+nord15 = #B48EAD
+
 
 background-alt = #444
 foreground-alt = #555
@@ -28,7 +47,6 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/norse]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
 offset-x = 0%
@@ -57,7 +75,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem pulseaudio  memory cpu wlan eth battery temperature date powermenu
+modules-right = pulseaudio  memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -261,7 +279,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
