@@ -33,8 +33,8 @@ nord15 = #B48EAD
 background = #B32E3440
 foreground = ${colors.nord6}
 
-background-alt = ${colors.nord10}
-foreground-alt = ${colors.nord10}
+background-alt = ${colors.nord0}
+foreground-alt = ${colors.nord0}
 primary = ${colors.nord7}
 secondary = ${colors.nord13}
 alert = ${colors.nord11}
@@ -58,9 +58,10 @@ border-color = #00000000
 
 padding-left = 0
 padding-right = 0 
+padding-right-background = 
 
 module-margin-left = 1
-module-margin-right = 1
+module-margin-right = 0
 
 font-0 = SauceCodePro Nerd Font:style=Regular
 
@@ -71,6 +72,7 @@ modules-right = pulseaudio battery wlan eth date powermenu
 tray-position = center
 tray-padding = 2
 tray-background = ${colors.background-alt}
+tray-foreground = ${colors.foreground}
 
 wm-restack = i3
 
@@ -291,16 +293,16 @@ format-volume-foreground = ${colors.foreground-alt}
 ramp-volume-font = 
 
 bar-volume-width = 12
-bar-volume-foreground-0 = ${colors.nord14}
-bar-volume-foreground-1 = ${colors.nord14}
-bar-volume-foreground-2 = ${colors.nord14}
-bar-volume-foreground-3 = ${colors.nord14}
-bar-volume-foreground-4 = ${colors.nord14}
-bar-volume-foreground-5 = ${colors.nord14}
-bar-volume-foreground-6 = ${colors.nord13}
-bar-volume-foreground-7 = ${colors.nord13}
-bar-volume-foreground-8 = ${colors.nord11}
-bar-volume-foreground-9 = ${colors.nord11}
+bar-volume-foreground-0 = ${colors.nord8}
+bar-volume-foreground-1 = ${colors.nord8}
+bar-volume-foreground-2 = ${colors.nord8}
+bar-volume-foreground-3 = ${colors.nord8}
+bar-volume-foreground-4 = ${colors.nord8}
+bar-volume-foreground-5 = ${colors.nord8}
+bar-volume-foreground-6 = ${colors.nord9}
+bar-volume-foreground-7 = ${colors.nord9}
+bar-volume-foreground-8 = ${colors.nord10}
+bar-volume-foreground-9 = ${colors.nord10}
 bar-volume-gradient = false
 bar-volume-indicator =  
 bar-volume-indicator-font = 1
@@ -412,32 +414,26 @@ type = custom/menu
 
 expand-right = false
 
-format-spacing = 1 
+format-padding = 0
+format-background = ${colors.background-alt} 
 format-underline = ${colors.nord11}
 
-label-open = 
-label-open-foreground = ${colors.nord5}
+label-open = " 襤 "
+label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.background-alt}
-label-close =  cancel
-label-close-foreground = ${colors.background-alt}
-label-close-background = ${colors.nord8}
-label-separator = |
+label-close = "  "
+label-close-foreground = ${colors.nord14}
+label-close-background = ${colors.background-alt}
+label-separator = 
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
+menu-0-0 = " 襤 " 
+menu-0-0-foreground = ${colors.nord11} 
+menu-0-0-exec = "shutdown -P now"
+menu-0-1 = " ﰇ " 
+menu-0-1-foreground = ${colors.nord13}
+menu-0-1-exec = "reboot"
 
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
