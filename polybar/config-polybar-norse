@@ -9,12 +9,6 @@
 ;   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝              ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ;
 ;
-;   To learn more about how to configure Polybar
-;   rd
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
 ;===================================================================================================================
 
 [colors]
@@ -37,20 +31,17 @@ nord14 = #A3BE8C
 nord15 = #B48EAD
 
 background = #B32E3440
-; ${colors.nord3}
-; ${xrdb:background:#222}
 foreground = ${colors.nord6}
-; ${xrdb:foreground:#222}
 
-background-alt = #444
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+background-alt = ${colors.nord10}
+foreground-alt = ${colors.nord10}
+primary = ${colors.nord7}
+secondary = ${colors.nord13}
+alert = ${colors.nord11}
 
 [bar/norse]
 width = 100%
-height = 27
+height = 30
 offset-x = 0%
 offset-y = 0%
 radius = 0.0
@@ -59,40 +50,29 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 0
 line-color = #f00
 
 border-size = 5
 border-color = #00000000
 
 padding-left = 0
-padding-right = 0
+padding-right = 0 
 
-module-margin-left = 0
+module-margin-left = 1
 module-margin-right = 1
 
 font-0 = SauceCodePro Nerd Font:style=Regular
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = pulseaudio  memory cpu wlan eth battery temperature date powermenu
+modules-right = pulseaudio battery wlan eth date powermenu
 
-tray-position = right
+tray-position = center
 tray-padding = 2
-;tray-background = #0063ff
+tray-background = ${colors.background-alt}
 
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+wm-restack = i3
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -158,19 +138,19 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = ${colors.foreground}
 label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.background}
+label-focused-background = ${colors.background-alt}
 label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -241,7 +221,7 @@ label = %percentage_used%%
 [module/wlan]
 type = internal/network
 interface = wlo1
-interval = 3.0
+interval = 1.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
@@ -278,7 +258,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date =
 date-alt = " %Y-%m-%d"
@@ -295,29 +275,40 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = 墳 %percentage%%
+format-volume = <ramp-volume> <bar-volume>
+format-volume-prefix-foreground = ${colors.foreground-alt}
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+format-muted = <bar-volume>
+label-muted-prefix = "Test" 
 label-muted-foreground = #666
 
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+ramp-volume-0 = 奄 
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+format-volume-foreground = ${colors.foreground-alt} 
+ramp-volume-font = 
+
+bar-volume-width = 12
+bar-volume-foreground-0 = ${colors.nord14}
+bar-volume-foreground-1 = ${colors.nord14}
+bar-volume-foreground-2 = ${colors.nord14}
+bar-volume-foreground-3 = ${colors.nord14}
+bar-volume-foreground-4 = ${colors.nord14}
+bar-volume-foreground-5 = ${colors.nord14}
+bar-volume-foreground-6 = ${colors.nord13}
+bar-volume-foreground-7 = ${colors.nord13}
+bar-volume-foreground-8 = ${colors.nord11}
+bar-volume-foreground-9 = ${colors.nord11}
 bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-indicator =  
+bar-volume-indicator-font = 1
+bar-volume-fill = ﱢ
+bar-volume-fill-font = 1
+bar-volume-empty = ﱢ
+bar-volume-empty-font = 0
+bar-volume-empty-foreground = ${colors.background}
 
 [module/alsa]
 type = internal/alsa
@@ -353,8 +344,11 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging>
 format-charging-underline = #ffb52a
+format-charging-prefix = " "
+format-charging-prefix-foreground = ${colors.foreground-alt}
+label-charging = %percentage%%
 
 format-discharging = <ramp-capacity> <label-discharging>
 ;<animation-discharging> <label-discharging>
@@ -364,11 +358,16 @@ format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 =  
-ramp-capacity-1 =  
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 =  
+ramp-capacity-1 =  
+ramp-capacity-2 =  
+ramp-capacity-3 =  
+ramp-capacity-4 =  
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 =  
@@ -411,15 +410,17 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false
 
-format-spacing = 1
+format-spacing = 1 
 format-underline = ${colors.nord11}
 
 label-open = 
 label-open-foreground = ${colors.nord5}
+label-open-background = ${colors.background-alt}
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.background-alt}
+label-close-background = ${colors.nord8}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
@@ -450,4 +451,4 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini
+vim:ft=dosini
