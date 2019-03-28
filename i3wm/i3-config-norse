@@ -18,7 +18,7 @@ exec_always --no-startup-id xrdb -merge $HOME/.Xresources && $HOME/.config/polyb
 exec compton --config ~/.config/compton.config -fb
 
 # Set the background wallpaper
-exec feh --bg-scale ~/dotfiles/norse/valknut-low-brightness.png 
+exec feh --bg-scale ~/dotfiles/norse/valknut-standard-brightness.png 
 # Add auto-mounting support and tray using udiskie
 exec udiskie -atm nested
 
@@ -32,7 +32,8 @@ exec --no-startup-id start-pulseaudio-x11
 #########################################
 
 default_border none
-gaps inner 5 
+gaps inner 4
+gaps outer 1 
 gaps top -5
 
 #########################################
@@ -152,7 +153,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-msg exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
