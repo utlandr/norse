@@ -281,9 +281,8 @@ format-volume-prefix-foreground = ${colors.foreground-alt}
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted = <bar-volume>
-label-muted-prefix = "Test" 
-label-muted-foreground = #666
+format-muted = ﱝ ﱢﱢﱢﱢﱢﱢﱢﱢﱢﱢﱢ
+format-muted-foreground = ${colors.background}
 
 ramp-volume-0 = 奄 
 ramp-volume-1 = 奔
