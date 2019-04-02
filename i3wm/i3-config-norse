@@ -55,8 +55,8 @@ bindsym $mod+Return exec xfce4-terminal --hide-menubar --hide-scrollbar
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Run dmenu TODO: Replace with rofi or albert
-bindsym $mod+d exec dmenu_run
+# Run rofi with norse theme
+bindsym $mod+d exec rofi -show drun -config "~/.config/rofi/norse.rasi"
 
 
 # change focus
