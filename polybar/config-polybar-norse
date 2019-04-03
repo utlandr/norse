@@ -45,7 +45,7 @@ height = 30
 offset-x = 0%
 offset-y = 0%
 radius = 0.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -62,7 +62,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = SauceCodePro Nerd Font:style=Regular
+font-0 = SauceCodePro Nerd Font:style=Regular:size=11;3
 
 modules-left = i3
 modules-center = mpd
