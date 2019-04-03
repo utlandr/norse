@@ -52,10 +52,10 @@ configuration {
 /*	show-match: true;*/
 	theme: "norse";
 	/*	       BG	FG	 BG-ALT	  BG-SEL   FG-SEL*/
-	color-normal: "#2E3440, #ECEFF4, #2E3440, #ECEFF4, #233440";
+	color-normal: "#002E3440, #ECEFF4, #002E3440, #ECEFF4, #2E3440";
 /*	color-urgent: ;*/
 /*	color-active: ;*/
-	color-window: "#2E3440";
+	color-window: "#B32E3440";
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
