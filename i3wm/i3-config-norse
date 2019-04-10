@@ -28,13 +28,46 @@ exec --no-startup-id start-pulseaudio-x11
 #################
 
 
+#~~  Nord color palette  ~~#
+############################
+
+# This is nord0 with 0.7 opacity (my main background colour)
+set $trans_back "#2E3440DD"  
+
+set $nord0 "#2E3440"
+set $nord1 "#3B4252"
+set $nord2 "#434C5E"
+set $nord3 "#4C566A"
+set $nord4 "#D8DEE9"
+set $nord5 "#E5E9F0"
+set $nord6 "#ECEFF4"
+set $nord7 "#8FBCBB"
+set $nord8 "#88C0D0"
+set $nord9 "#81A1C1"
+set $nord10 "#5E81AC"
+set $nord11 "#BF616A"
+set $nord12 "#D08770"
+set $nord13 "#EBCB8B"
+set $nord14 "#A3BE8C"
+set $nord15 "#B48EAD"
+############################
+
+
 #~~  Window/Container Configuration  ~~##
 #########################################
 
 default_border none
+default_floating_border normal 0
 gaps inner 4
 gaps outer 1 
 gaps top -5
+
+# class                 backgr_border	backgr_color	text	indicator	child_border
+client.focused          $trans_back	$trans_back	$nord6	$trans_back	$trans_back
+client.focused_inactive $trans_back	$trans_back	$nord10	$trans_back	$trans_back
+client.unfocused        $trans_back	$trans_back	$nord10	$trans_back	$trans_back
+client.urgent           $trans_back	$trans_back	$nord10	$trans_back	$trans_back
+client.placeholder      $trans_back	$nord11 	$nord10	$trans_back	$trans_back
 
 #########################################
 
