@@ -56,6 +56,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Activate oh-my-zsh plugins
 plugins=(git zsh-autosuggestions)
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=247"
+
 source $ZSH/oh-my-zsh.sh
 
 # UGLY miniconda/conda init (python 2.7 32-bit; because mandatory, 
