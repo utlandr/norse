@@ -234,11 +234,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 =  
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 睊
+ramp-signal-1 = 直
+ramp-signal-2 = 直 
+ramp-signal-3 = 直
+ramp-signal-4 = 直
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -354,7 +354,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 ;<animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
