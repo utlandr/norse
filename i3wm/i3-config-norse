@@ -56,16 +56,16 @@ set $nord15 "#B48EAD"
 #~~  Window/Container Configuration  ~~##
 #########################################
 
-default_border none
+default_border pixel
 default_floating_border normal 0
 gaps inner 4
 gaps outer 1 
 gaps top -5
 
 # class                 backgr_border	backgr_color	text	indicator	child_border
-client.focused          $trans_back	$trans_back	$nord6	$trans_back	$trans_back
-client.focused_inactive $trans_back	$trans_back	$nord10	$trans_back	$trans_back
-client.unfocused        $trans_back	$trans_back	$nord10	$trans_back	$trans_back
+client.focused          $trans_back	$trans_back	$nord6	$nord10 	$nord10
+client.focused_inactive $trans_back	$trans_back	$nord10	$nord7  	$nord7
+client.unfocused        $trans_back	$trans_back	$nord10	$nord7  	$nord7
 client.urgent           $trans_back	$trans_back	$nord10	$trans_back	$trans_back
 client.placeholder      $trans_back	$nord11 	$nord10	$trans_back	$trans_back
 
