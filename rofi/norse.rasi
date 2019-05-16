@@ -38,7 +38,7 @@ configuration {
 /*	line-margin: 2;*/
 /*	line-padding: 1;*/
 /*	filter: ;*/
-/*	separator-style: "dash";*/
+	separator-style: "solid";
 	hide-scrollbar: true;
 /*	fullscreen: false;*/
 /*	fake-transparency: false;*/
