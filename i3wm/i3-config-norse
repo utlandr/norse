@@ -238,5 +238,5 @@ bindsym $mod+Tab exec xfce4-terminal --drop-down
 
 # i3 matrix screensaver 
 # Arc Dark + Old Norse + Matrix Steel Rain = Inconsistent but awesome
-bindsym $mod+m exec xfce4-terminal --fullscreen --hide-menubar --hide-scrollbar -e "cmatrix -bu15"
+bindsym $mod+m exec xfce4-terminal --fullscreen --hide-menubar --hide-scrollbar -e "/home/gangleri/dotfiles/norse/scripts/matrix-saver.sh"
 
