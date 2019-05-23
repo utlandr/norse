@@ -162,10 +162,10 @@ type = internal/pulseaudio
 format-volume = <ramp-volume> <bar-volume>
 format-volume-prefix-foreground = ${colors.foreground-alt}
 label-volume = %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${root.foreground-alt}
 
 format-muted = ﱝ ﱢﱢﱢﱢﱢﱢﱢﱢﱢﱢﱢ
-format-muted-foreground = ${colors.background}
+format-muted-foreground = ${colors.foreground-alt}
 
 ramp-volume-0 = 奄 
 ramp-volume-1 = 奔
@@ -244,7 +244,7 @@ label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = " 襤 " 
 menu-0-0-foreground = ${colors.nord11} 
-menu-0-0-exec = "shutdown -P now"
+menu-0-0-exec = "poweroff"
 menu-0-1 = " ﰇ " 
 menu-0-1-foreground = ${colors.nord13}
 menu-0-1-exec = "reboot"
