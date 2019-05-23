@@ -67,8 +67,8 @@ font-0 = SauceCodePro Nerd Font:style=Regular:size=11;3
 modules-left = i3
 modules-right = pulseaudio battery wlan eth date powermenu
 
-tray-position = center
-tray-padding = 2
+tray-position = right
+tray-padding = 0
 tray-background = ${colors.background-alt}
 tray-foreground = ${colors.foreground}
 
