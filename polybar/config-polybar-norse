@@ -193,7 +193,7 @@ bar-volume-fill = ﱢ
 bar-volume-fill-font = 1
 bar-volume-empty = ﱢ
 bar-volume-empty-font = 0
-bar-volume-empty-foreground = ${colors.background}
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
