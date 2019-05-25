@@ -81,12 +81,6 @@ client.unfocused        $trans_back	$trans_back	$nord10	$nord7  	$nord7
 client.urgent           $trans_back	$trans_back	$nord10	$trans_back	$trans_back
 client.placeholder      $trans_back	$nord11 	$nord10	$trans_back	$trans_back
 
-# Custom window configurations
-
-# MATLAB gets a free pass with all the bloody figures it generates
-for_window [class="MATLAB R2019a - academic use"  title="Figure*"] floating enable, move container to workspace $ws9 
-no_focus [class="MATLAB R2019a - academic use"  title="Figure*"] 
-
 #########################################
 
 # Set the super mod key to be the 'Windows' key
