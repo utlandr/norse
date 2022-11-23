@@ -1,5 +1,4 @@
 configuration {
-	theme: "norse";
 	modi: "window,drun,run,ssh";
 	width: 50;
 	lines: 5;
@@ -20,3 +19,4 @@ configuration {
 
 /* vim:ft=css
 
+@theme: "norse";
